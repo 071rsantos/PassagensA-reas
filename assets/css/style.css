@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-nav{
+    padding: 10px;
+    padding-top: 5px;
+    background: rgb(26, 115, 232);
+    width: 1860px;
+    display: flex;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.card{
+    width: 500px;
+    left: -150px;
+}

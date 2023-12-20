@@ -1,0 +1,22 @@
+CREATE DATABASE dbpassagem;
+USE dbpassagem;
+
+-- Tabela de Voos
+CREATE TABLE Voo (
+    idVoo INT AUTO_INCREMENT PRIMARY KEY,
+    origem VARCHAR(50),
+    destino VARCHAR(50),
+    assentosDisponiveis INT,
+    valorPassagem DECIMAL(10, 2)
+);
+
+-- Tabela de Reservas
+CREATE TABLE Reserva (
+    idReserva INT AUTO_INCREMENT PRIMARY KEY,
+    vooId INT,
+    nomeCliente VARCHAR(100),
+    numAssento VARCHAR(10),
+    desconto DECIMAL(5, 2),
+    valorFinal DECIMAL(10, 2),
+    FOREIGN KEY (vooId) REFERENCES Voo(idVoo)
+);
